@@ -27,9 +27,15 @@ public class UsuarioDto {
     private Long cpf;
 
     public UsuarioDto(Usuario usuario) {
-        this.id = usuario.getId();
-        this.name = usuario.getName();
-        this.age = usuario.getAge();
-        this.profissao = usuario.getProfissao();
+    this.id = usuario.getId();
+    this.name = usuario.getName();
+    this.age = usuario.getAge();
+    this.cpf = usuario.getCpf();
+
+    }
+
+
+    public static UsuarioDto converter(Usuario usuario) {
+        return new UsuarioDto(usuario);
     }
 }

@@ -10,7 +10,7 @@ public interface UsuarioServices {
 
     public Usuario cadastrar(UsuarioDto dto);
 
-    public UsuarioDto detalhar(Long id);
+    public Optional<UsuarioDto> detalhar(Long id);
 
     public Optional<Usuario> atualizar(Long id, UsuarioDto dto );
 

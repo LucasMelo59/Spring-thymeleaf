@@ -26,7 +26,7 @@ public class UsuarioServicesImpl implements UsuarioServices {
 
     @Override
     public Optional<UsuarioDto> detalhar(Long id) {
-        return repository.findByIdOp;
+        return repository.findById(id).map(UsuarioDto::converter);
     }
 
     @Override
