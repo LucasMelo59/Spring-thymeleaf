@@ -7,15 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class HomeController {
-    @Autowired
-    UsuarioRepository repository;
+
     @Autowired
     UsuarioServices services;
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("Clientes", services.lista());
+    public String home(HttpServletRequest request) {
+
+        request.setAttribute("nome", "mundo");
         return "home";
     }
     }
